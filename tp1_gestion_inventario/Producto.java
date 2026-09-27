@@ -89,4 +89,14 @@ public class Producto {
         System.out.printf("Stock:   %d%n", stock);
         System.out.println("==========================");
     }
+
+    public void aplicarDescuento(double porcentaje) {
+        if (porcentaje > 0 && porcentaje <= 100) {
+            double descuento = precio * (porcentaje / 100);
+            precio = precio - descuento;
+            System.out.printf("Descuento aplicado: %.2f%%. Nuevo precio: $%.2f%n", porcentaje, precio);
+        } else {
+            System.out.println("ERROR: El porcentaje de descuento debe estar entre 0 y 100.");
+        }
+    }
 }
