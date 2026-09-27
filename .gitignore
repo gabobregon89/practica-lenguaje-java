@@ -1,0 +1,32 @@
+# Compilación de Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Directorios de build
+bin/
+build/
+out/
+target/
+
+# Archivos de IDE / editor
+.vscode/
+*.code-workspace
+
+# Archivos temporales del sistema
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Archivos de configuración local
+.DS_Store
+Thumbs.db
+
+# Archivos de IntelliJ / Eclipse (por si se usan)
+.idea/
+*.iml
+.settings/
+.project
+.classpath
