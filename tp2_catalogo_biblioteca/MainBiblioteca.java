@@ -33,6 +33,11 @@ public class MainBiblioteca {
             libro.mostrarFicha();
         }
 
+        // Libro 5 - caso de instancia con errores
+        System.out.println("=== Libro 5 ===");
         Libro libro5 = new Libro("", "", null, 0, -1000.0);
+
+        // Prestamos historicos
+        System.out.println("Prestamos historicos del libro 2: " + libro2.getPrestamosHistoricos());
     } 
 }

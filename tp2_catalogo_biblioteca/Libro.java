@@ -1,10 +1,12 @@
-public class Libro {
+public final class Libro {
+    // al marcarla como final, no se puede heredar de esta clase, es decir, no se puede crear una subclase de Libro.
 
     private final String titulo;
     private final String autor;
     private final String isbn;
     private int copiasDisponibles;
     private double precioReposicion;
+    private int prestamosHistoricos;
 
     public Libro(String titulo, String autor, String isbn, int copiasDisponibles, double precioReposicion) {
         this.titulo = validacionParametro(titulo) ? "Sin titulo" : titulo;
@@ -48,6 +50,10 @@ public class Libro {
         return precioReposicion > 0;
     }
 
+    public int getPrestamosHistoricos() {
+        return prestamosHistoricos;
+    }
+
     public void mensajeCasoInstanciaError(String titulo, String autor, String isbn, int copiasDisponibles, double precioReposicion) {
         if (validacionParametro(titulo)) {
             System.out.println("ERROR: El titulo es invalido, no puede ser nulo ni vacio.");
@@ -67,6 +73,8 @@ public class Libro {
     }
 
     public boolean prestar() {
+        this.prestamosHistoricos++;
+
         if (this.copiasDisponibles > 0) {
             this.copiasDisponibles--;
             System.out.println("El prestamo se realizo correctamente.");
