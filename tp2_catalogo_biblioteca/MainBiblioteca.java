@@ -26,6 +26,9 @@ public class MainBiblioteca {
         System.out.println("Confirmando que el valor no quedo en negativo.");
         System.out.println("Copias disponibles: " + libro2.getCopiasDisponibles());
 
+        libro2.devolver();
+        System.out.println("Copias disponibles luego de la devolucion: " + libro2.getCopiasDisponibles());
+
         // Mostrando datos
         Libro[] libros = {libro1, libro2, libro3};
         System.out.println("=== Catalogo de libros ===");
