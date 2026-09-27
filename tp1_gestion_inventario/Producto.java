@@ -83,7 +83,7 @@ public class Producto {
         String codigoProducto = (codigo != null && !codigo.isBlank()) ? codigo : "N/A";
 
         System.out.println("=== Ficha de producto ===");
-        System.out.printf("Código:  %s%n", codigoProducto);
+        System.out.printf("Codigo:  %s%n", codigoProducto);
         System.out.printf("Nombre:  %s%n", nombreProducto);
         System.out.printf("Precio:  $%.1f%n", precio);
         System.out.printf("Stock:   %d%n", stock);
